@@ -241,7 +241,7 @@ class GradientButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         height: size.height * .07,
-        width: width?? size.width,
+        width: width ?? size.width,
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -289,7 +289,7 @@ class ActorsList extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         SizedBox(
-          height: 190,
+          height: size.height * .2,
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
             itemCount: listActors.length,
@@ -317,10 +317,11 @@ class ActorsList extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: kMovieTextStyle.copyWith(
-                            fontWeight: FontWeight.w400,
-                            height: 1.5,
-                            color: Colors.white.withOpacity(.9),
-                            fontSize: size.height*.024,),
+                          fontWeight: FontWeight.w400,
+                          height: 1.5,
+                          color: Colors.white.withOpacity(.9),
+                          fontSize: size.height * .024,
+                        ),
                       ),
                     )
                   ],
